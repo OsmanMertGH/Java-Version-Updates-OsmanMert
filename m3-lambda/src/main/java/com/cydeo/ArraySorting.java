@@ -8,6 +8,9 @@ public class ArraySorting {
         QuickSort qs = new QuickSort();
         BubbleSort bs = new BubbleSort();
 
+        as.sort(qs);
+        as.sort(bs);
+
     }
 
     private void sort(Sorting sorting) {
