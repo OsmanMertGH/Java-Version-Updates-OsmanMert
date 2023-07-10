@@ -5,6 +5,7 @@ import com.cydeo.tasks.farmer.ApplePredicate;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FunctionalInterfaces {
@@ -33,5 +34,8 @@ public class FunctionalInterfaces {
         BiConsumer<Integer,Integer>  addTwo = (x,y) ->System.out.println(x+y);
         addTwo.accept(1,2);
 
+        System.out.println("*****************FUNCTION**************");
+        Function<String,String> fun = s->"Hello "+ s;
+        System.out.println(fun.apply("Cydeo"));
     }
 }
