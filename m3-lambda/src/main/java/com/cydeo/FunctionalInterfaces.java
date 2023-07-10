@@ -41,6 +41,6 @@ public class FunctionalInterfaces {
 
         System.out.println("*****************SUPPLIER**************");
         Supplier<Double> randomValue = () ->Math.random();
-        randomValue.get();
+        System.out.println(randomValue.get());
     }
 }
