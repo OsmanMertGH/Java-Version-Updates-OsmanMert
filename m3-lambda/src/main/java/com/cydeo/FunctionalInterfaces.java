@@ -3,10 +3,7 @@ package com.cydeo;
 import com.cydeo.tasks.farmer.Apple;
 import com.cydeo.tasks.farmer.ApplePredicate;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class FunctionalInterfaces {
     public static void main(String[] args) {
@@ -37,5 +34,13 @@ public class FunctionalInterfaces {
         System.out.println("*****************FUNCTION**************");
         Function<String,String> fun = s->"Hello "+ s;
         System.out.println(fun.apply("Cydeo"));
+
+        System.out.println("*****************BI FUNCTION**************");
+        BiFunction<Integer,Integer,Integer> func = (x1, x2) ->x1+x2;
+        System.out.println(func.apply(2,3));
+
+        System.out.println("*****************SUPPLIER**************");
+        Supplier<Double> randomValue = () ->Math.random();
+        randomValue.get();
     }
 }
