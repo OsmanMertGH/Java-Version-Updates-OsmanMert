@@ -13,6 +13,7 @@
         <module>m2-enum</module>
         <module>m3-lambda</module>
         <module>m4-double_colon_operators</module>
+        <module>m5-comparator_interface</module>
     </modules>
 
     <properties>
@@ -20,5 +21,13 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+        </dependency>
+    </dependencies>
 
 </project>
