@@ -29,5 +29,6 @@ public class Main {
 
         BiFunction<MyClass, Integer, Double> m2 = MyClass::method;
 
+
     }
 }
