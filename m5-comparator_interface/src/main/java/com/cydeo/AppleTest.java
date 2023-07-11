@@ -15,8 +15,16 @@ public class AppleTest {
         inventory.add(new Apple(50, Color.RED));
 
 
-        Comparator<Apple> sortApple = Comparator.comparing((Apple apple)-> apple.getWeight());
+        Comparator<Apple> sortApple = Comparator.comparing((Apple apple) -> apple.getWeight());
         inventory.sort(sortApple);
         System.out.println(inventory);
+
+        inventory.sort(Comparator.comparing(Apple::getWeight));
+        System.out.println(inventory);
+
+        //Chaining
+        inventory
+                .sort(Comparator.comparing(Apple::getWeight)
+                        .reversed().thenComparing(Apple::getColor));
     }
 }
