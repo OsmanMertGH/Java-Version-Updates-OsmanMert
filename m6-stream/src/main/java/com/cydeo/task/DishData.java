@@ -21,8 +21,8 @@ public class DishData {
     );
 
     menu.stream()
-            .filter(i->i.getCalories()>400)
-            .map(i->i.getName())
+            .filter(i->i.getCalories()<400)
+            .map(Dish::getName)
             .forEach(System.out::println);
     }
 }
