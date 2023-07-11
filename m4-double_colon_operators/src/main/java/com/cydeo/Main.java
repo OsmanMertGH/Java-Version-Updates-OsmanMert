@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Main {
@@ -23,6 +24,10 @@ public class Main {
         BiFunction<String, Integer, String> func = (str, i) -> str.substring(i);
 
         BiFunction<String, Integer, String> func2 = String::substring;
+
+        Function<Integer, Double> m1 = new MyClass()::method;
+
+        BiFunction<MyClass, Integer, Double> m2 = MyClass::method;
 
     }
 }
