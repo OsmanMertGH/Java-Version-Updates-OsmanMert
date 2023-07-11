@@ -36,7 +36,8 @@ public class StreamOperations {
 
         System.out.println("MAP");
         list.stream()
-                .map(i->i*2)
+                .map(number->number*2)
+                .filter(i->i%3==0)
                 .forEach(System.out::println);
 
     }
