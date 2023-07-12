@@ -36,5 +36,9 @@ public class FindingMatching {
         System.out.println("FIND ANY");
         Optional<Dish>dish= menu2.stream().filter(Dish::isVegetarian).findAny();
         System.out.println(dish);
+
+        System.out.println("FIND FIRST");
+        Optional<Dish>dish2= menu2.stream().filter(Dish::isVegetarian).findFirst();
+        System.out.println(dish2);
     }
 }
