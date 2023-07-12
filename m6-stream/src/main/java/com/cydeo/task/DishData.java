@@ -1,6 +1,7 @@
 package com.cydeo.task;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class DishData {
@@ -29,7 +30,17 @@ public class DishData {
             .map(Dish::getName)
             .map(dish->dish.length())
             .forEach(System.out::println);
+
+
+    menu.stream()
+            .filter(dish->dish.getCalories()<400)
+            .sorted(Comparator.comparing(Dish::getCalories))
+            .map(Dish::getName)
+            .forEach(System.out::println);
+
     }
+
+
 
 
 }
